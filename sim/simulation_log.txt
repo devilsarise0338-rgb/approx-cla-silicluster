@@ -1,0 +1,3 @@
+VCD info: dumpfile approx_cla_tb.vcd opened for output.
+Mismatches vs model: 0 | max error vs exact: 19 | inputs with error: 13824 of 16384
+approx_cla_tb.v:35: $finish called at 1638551000 (1ps)

@@ -1,0 +1,3 @@
+warning: Some modules have no timescale. This may cause
+       : confusing timing results.	Affected modules are:
+       :   -- module approx_cla declared here: ../rtl/approx_cla.v:1

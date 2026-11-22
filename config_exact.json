@@ -1,0 +1,8 @@
+{
+  "DESIGN_NAME": "exact_cla",
+  "VERILOG_FILES": ["dir::exact_cla.v"],
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 100,
+  "FP_SIZING": "absolute",
+  "DIE_AREA": [0, 0, 180, 115]
+}

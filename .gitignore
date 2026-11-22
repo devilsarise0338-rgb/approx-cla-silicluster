@@ -1,0 +1,15 @@
+# Operating System Files
+[Dd]esktop.ini
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+.DS_Store
+
+# Temporary / Office lock files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.tmp
+*~
