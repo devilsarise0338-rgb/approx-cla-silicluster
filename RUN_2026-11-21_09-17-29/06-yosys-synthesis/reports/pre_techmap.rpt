@@ -1,0 +1,23 @@
+103. Printing statistics.
+
+=== exact_cla ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       37 wires
+       69 wire bits
+        7 public wires
+       39 public wire bits
+        5 ports
+       24 port bits
+       40 cells
+        1   $_AND_
+       18   $_NAND_
+        8   $_SDFF_PP0_
+       13   $_XOR_
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_SDFF_PP0_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+

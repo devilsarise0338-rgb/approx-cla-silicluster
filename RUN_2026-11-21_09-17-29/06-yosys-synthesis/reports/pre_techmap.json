@@ -1,0 +1,45 @@
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)",
+   "invocation": "stat -json -liberty /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/3ec30de098ef4cab997b39ead99b1e28.lib -liberty /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/5703a9a52d154eb1a3edc718244134b3.lib ",
+   "modules": {
+      "\\exact_cla": {
+         "num_wires":         37,
+         "num_wire_bits":     69,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 39,
+         "num_ports":         5,
+         "num_port_bits":     24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         40,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 1,
+            "$_NAND_": 18,
+            "$_SDFF_PP0_": 8,
+            "$_XOR_": 13
+         }
+      }
+   },
+      "design": {
+         "num_wires":         37,
+         "num_wire_bits":     69,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 39,
+         "num_ports":         5,
+         "num_port_bits":     24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         40,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 1,
+            "$_NAND_": 18,
+            "$_SDFF_PP0_": 8,
+            "$_XOR_": 13
+         }
+      }
+}
+

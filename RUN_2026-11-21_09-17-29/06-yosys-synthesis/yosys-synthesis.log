@@ -1,0 +1,1014 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)
+Found gzip magic in file `/foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib.gz', decompressing using zlib.
+
+1. Executing Liberty frontend: /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib.gz
+Imported 84 cell types from liberty file.
+Found gzip magic in file `/foss/pdks/ihp-sg13g2/libs.ref/sg13g2_io/lib/sg13g2_io_typ_1p2V_3p3V_25C.lib.gz', decompressing using zlib.
+
+2. Executing Liberty frontend: /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_io/lib/sg13g2_io_typ_1p2V_3p3V_25C.lib.gz
+Imported 22 cell types from liberty file.
+[INFO] Using SDC file '/foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+3. Executing Verilog-2005 frontend: /foss/designs/exact_cla/exact_cla.v
+Parsing SystemVerilog input from `/foss/designs/exact_cla/exact_cla.v' to AST representation.
+Storing AST representation for module `$abstract\exact_cla'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+5. Executing AST frontend in derive mode using pre-parsed AST for module `\exact_cla'.
+Generating RTLIL representation for module `\exact_cla'.
+
+5.1. Analyzing design hierarchy..
+Top module:  \exact_cla
+
+5.2. Analyzing design hierarchy..
+Top module:  \exact_cla
+Removing unused module `$abstract\exact_cla'.
+Removed 1 unused modules.
+Renaming module exact_cla to exact_cla.
+
+6. Executing ATTRMAP pass (move or copy attributes).
+
+7. Executing TRIBUF pass.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \exact_cla
+
+8.2. Analyzing design hierarchy..
+Top module:  \exact_cla
+Removed 0 unused modules.
+
+9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/foss/designs/exact_cla/exact_cla.v:20$80 in module exact_cla.
+Removed a total of 0 dead cases.
+
+11. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 0 assignments to connections.
+
+12. Executing PROC_INIT pass (extract init attributes).
+
+13. Executing PROC_ARST pass (detect async resets in processes).
+
+14. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+15. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\exact_cla.$proc$/foss/designs/exact_cla/exact_cla.v:20$80'.
+     1/1: $0\sum[7:0]
+
+16. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+17. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\exact_cla.\sum' using process `\exact_cla.$proc$/foss/designs/exact_cla/exact_cla.v:20$80'.
+  created $dff cell `$procdff$85' with positive edge clock.
+
+18. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+19. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\exact_cla.$proc$/foss/designs/exact_cla/exact_cla.v:20$80'.
+Removing empty process `exact_cla.$proc$/foss/designs/exact_cla/exact_cla.v:20$80'.
+Cleaned up 1 empty switch.
+
+20. Executing CHECK pass (checking for obvious problems).
+Checking module exact_cla...
+Found and reported 0 problems.
+
+21. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+22. Executing FLATTEN pass (flatten design).
+
+23. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 82 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Computing hashes of 72 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Computing hashes of 66 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Computing hashes of 63 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Computing hashes of 62 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+<suppressed ~60 debug messages>
+Removed a total of 20 cells.
+
+27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exact_cla..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exact_cla.
+Performed a total of 0 changes.
+
+29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 62 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+30. Executing OPT_DFF pass (perform DFF optimizations).
+
+31. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+Removed 0 unused cells and 20 unused wires.
+<suppressed ~1 debug messages>
+
+32. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+33. Rerunning OPT passes. (Maybe there is more to do…)
+
+34. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exact_cla..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+35. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exact_cla.
+Performed a total of 0 changes.
+
+36. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 62 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+37. Executing OPT_DFF pass (perform DFF optimizations).
+
+38. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+39. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+40. Executing FSM pass (extract and optimize FSM).
+
+40.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+40.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+40.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+40.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+40.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+40.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+40.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+40.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+41. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+42. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 62 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+43. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exact_cla..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+44. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exact_cla.
+Performed a total of 0 changes.
+
+45. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 62 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+46. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$85 ($dff) from module exact_cla (D = { \c [7] $xor$/foss/designs/exact_cla/exact_cla.v:22$81_Y }, Q = \sum, rval = 8'00000000).
+
+47. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+48. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+49. Rerunning OPT passes. (Maybe there is more to do…)
+
+50. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exact_cla..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+51. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exact_cla.
+Performed a total of 0 changes.
+
+52. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 61 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+53. Executing OPT_DFF pass (perform DFF optimizations).
+
+54. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+55. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+56. Executing WREDUCE pass (reducing word size of cells).
+
+57. Executing PEEPOPT pass (run peephole optimizers).
+
+58. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+59. Executing BOOTH pass (map to Booth multipliers).
+Mapped 0 multipliers.
+
+60. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module exact_cla:
+  created 0 $alu and 0 $macc cells.
+
+61. Executing ARITH_TREE pass.
+
+62. Executing SHARE pass (SAT-based resource sharing).
+
+63. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+64. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 61 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+65. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exact_cla..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+66. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exact_cla.
+Performed a total of 0 changes.
+
+67. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 61 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+68. Executing OPT_DFF pass (perform DFF optimizations).
+
+69. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+70. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+71. Executing MEMORY pass.
+
+71.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+71.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+71.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+71.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+71.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+71.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+71.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+71.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+71.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+71.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+72. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+73. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+<suppressed ~3 debug messages>
+
+74. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 61 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+75. Executing OPT_DFF pass (perform DFF optimizations).
+
+76. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+77. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+78. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+79. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 61 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+80. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exact_cla..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+81. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exact_cla.
+Performed a total of 0 changes.
+
+82. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 61 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+83. Executing OPT_SHARE pass.
+
+84. Executing OPT_DFF pass (perform DFF optimizations).
+
+85. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+86. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+87. Executing TECHMAP pass (map to technology primitives).
+
+87.1. Executing Verilog-2005 frontend: /foss/tools/yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/foss/tools/yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+87.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+<suppressed ~138 debug messages>
+
+88. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+89. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 85 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+90. Executing OPT_DFF pass (perform DFF optimizations).
+
+91. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+92. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+93. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 85 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+94. Executing OPT_DFF pass (perform DFF optimizations).
+
+95. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+96. Executing ABC pass (technology mapping using ABC).
+
+96.1. Summary of detected clock domains:
+  85 cells in clk=\clk, en={ }, arst={ }, srst=\rst
+
+96.2. Extracting gate netlist of module `\exact_cla' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, synchronously reset by \rst
+
+96.2.1. Executed ABC.
+Extracted 77 gates and 91 wires to a netlist network with 14 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 15 2026 14:24:00)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+96.2.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:              NAND cells:       18
+ABC RESULTS:               XOR cells:       13
+ABC RESULTS:        internal signals:       69
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+97. Executing OPT pass (performing simple optimizations).
+
+97.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+97.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 40 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+97.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+97.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+Removed 0 unused cells and 68 unused wires.
+<suppressed ~1 debug messages>
+
+97.5. Finished fast OPT passes.
+
+98. Executing HIERARCHY pass (managing design hierarchy).
+
+98.1. Analyzing design hierarchy..
+Top module:  \exact_cla
+
+98.2. Analyzing design hierarchy..
+Top module:  \exact_cla
+Removed 0 unused modules.
+
+99. Executing CHECK pass (checking for obvious problems).
+Checking module exact_cla...
+Found and reported 0 problems.
+
+100. Printing statistics.
+
+=== exact_cla ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       38 wires
+       76 wire bits
+        8 public wires
+       46 public wire bits
+        5 ports
+       24 port bits
+       40 cells
+        1   $_AND_
+       18   $_NAND_
+        8   $_SDFF_PP0_
+       13   $_XOR_
+
+101. Executing OPT pass (performing simple optimizations).
+
+101.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+101.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 40 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+101.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \exact_cla..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+101.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \exact_cla.
+Performed a total of 0 changes.
+
+101.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\exact_cla'.
+Computing hashes of 40 cells of `\exact_cla'.
+Finding duplicate cells in `\exact_cla'.
+Removed a total of 0 cells.
+
+101.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+101.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+
+101.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module exact_cla.
+
+101.9. Finished fast OPT passes. (There is nothing left to do.)
+
+102. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)",
+   "invocation": "stat -json -liberty /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/3ec30de098ef4cab997b39ead99b1e28.lib -liberty /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/5703a9a52d154eb1a3edc718244134b3.lib ",
+   "modules": {
+      "\\exact_cla": {
+         "num_wires":         37,
+         "num_wire_bits":     69,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 39,
+         "num_ports":         5,
+         "num_port_bits":     24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         40,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 1,
+            "$_NAND_": 18,
+            "$_SDFF_PP0_": 8,
+            "$_XOR_": 13
+         }
+      }
+   },
+      "design": {
+         "num_wires":         37,
+         "num_wire_bits":     69,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 39,
+         "num_ports":         5,
+         "num_port_bits":     24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         40,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_AND_": 1,
+            "$_NAND_": 18,
+            "$_SDFF_PP0_": 8,
+            "$_XOR_": 13
+         }
+      }
+}
+
+103. Printing statistics.
+
+=== exact_cla ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       37 wires
+       69 wire bits
+        7 public wires
+       39 public wire bits
+        5 ports
+       24 port bits
+       40 cells
+        1   $_AND_
+       18   $_NAND_
+        8   $_SDFF_PP0_
+       13   $_XOR_
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_SDFF_PP0_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/foss/pdks/ihp-sg13g2/libs.tech/librelane/sg13g2_stdcell/tribuff_map.v'…
+
+104. Executing TECHMAP pass (map to technology primitives).
+
+104.1. Executing Verilog-2005 frontend: /foss/pdks/ihp-sg13g2/libs.tech/librelane/sg13g2_stdcell/tribuff_map.v
+Parsing Verilog input from `/foss/pdks/ihp-sg13g2/libs.tech/librelane/sg13g2_stdcell/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `$_TBUF_'.
+Successfully finished Verilog frontend.
+
+104.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+105. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/foss/pdks/ihp-sg13g2/libs.tech/librelane/sg13g2_stdcell/latch_map.v'…
+
+106. Executing TECHMAP pass (map to technology primitives).
+
+106.1. Executing Verilog-2005 frontend: /foss/pdks/ihp-sg13g2/libs.tech/librelane/sg13g2_stdcell/latch_map.v
+Parsing Verilog input from `/foss/pdks/ihp-sg13g2/libs.tech/librelane/sg13g2_stdcell/latch_map.v' to AST representation.
+Generating RTLIL representation for module `$_DLATCH_P_'.
+Generating RTLIL representation for module `$_DLATCH_PN0_'.
+Generating RTLIL representation for module `$_DLATCH_N_'.
+Generating RTLIL representation for module `$_DLATCH_NN0_'.
+Successfully finished Verilog frontend.
+
+106.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~6 debug messages>
+
+107. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+108. Executing DFFLIBMAP pass (mapping DFF/DLATCH cells to sequential cells from liberty file).
+  cell sg13g2_dfrbpq_1 (noninv, pins=4, area=48.99) is a direct match for cell type $_DFF_PN0_.
+  cell sg13g2_dlhq_1 (noninv, pins=3, area=30.84) is a direct match for cell type $_DLATCH_P_.
+  cell sg13g2_dllrq_1 (noninv, pins=4, area=29.03) is a direct match for cell type $_DLATCH_NN0_.
+  cell sg13g2_dlhrq_1 (noninv, pins=4, area=27.22) is a direct match for cell type $_DLATCH_PN0_.
+  final dff/dlatch cell mappings:
+    unmapped dff/dlatch cell: $_DFF_N_
+    unmapped dff/dlatch cell: $_DFF_P_
+    unmapped dff/dlatch cell: $_DFF_NN0_
+    unmapped dff/dlatch cell: $_DFF_NN1_
+    unmapped dff/dlatch cell: $_DFF_NP0_
+    unmapped dff/dlatch cell: $_DFF_NP1_
+    \sg13g2_dfrbpq_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DFF_PN1_
+    unmapped dff/dlatch cell: $_DFF_PP0_
+    unmapped dff/dlatch cell: $_DFF_PP1_
+    unmapped dff/dlatch cell: $_DFFE_NN_
+    unmapped dff/dlatch cell: $_DFFE_NP_
+    unmapped dff/dlatch cell: $_DFFE_PN_
+    unmapped dff/dlatch cell: $_DFFE_PP_
+    unmapped dff/dlatch cell: $_DFFSR_NNN_
+    unmapped dff/dlatch cell: $_DFFSR_NNP_
+    unmapped dff/dlatch cell: $_DFFSR_NPN_
+    unmapped dff/dlatch cell: $_DFFSR_NPP_
+    unmapped dff/dlatch cell: $_DFFSR_PNN_
+    unmapped dff/dlatch cell: $_DFFSR_PNP_
+    unmapped dff/dlatch cell: $_DFFSR_PPN_
+    unmapped dff/dlatch cell: $_DFFSR_PPP_
+    unmapped dff/dlatch cell: $_DLATCH_N_
+    \sg13g2_dlhq_1 _DLATCH_P_ (.D( D), .GATE( E), .Q( Q));
+    \sg13g2_dllrq_1 _DLATCH_NN0_ (.D( D), .GATE_N( E), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DLATCH_NN1_
+    unmapped dff/dlatch cell: $_DLATCH_NP0_
+    unmapped dff/dlatch cell: $_DLATCH_NP1_
+    \sg13g2_dlhrq_1 _DLATCH_PN0_ (.D( D), .GATE( E), .Q( Q), .RESET_B( R));
+    unmapped dff/dlatch cell: $_DLATCH_PN1_
+    unmapped dff/dlatch cell: $_DLATCH_PP0_
+    unmapped dff/dlatch cell: $_DLATCH_PP1_
+    unmapped dff/dlatch cell: $_DLATCHSR_NNN_
+    unmapped dff/dlatch cell: $_DLATCHSR_NNP_
+    unmapped dff/dlatch cell: $_DLATCHSR_NPN_
+    unmapped dff/dlatch cell: $_DLATCHSR_NPP_
+    unmapped dff/dlatch cell: $_DLATCHSR_PNN_
+    unmapped dff/dlatch cell: $_DLATCHSR_PNP_
+    unmapped dff/dlatch cell: $_DLATCHSR_PPN_
+    unmapped dff/dlatch cell: $_DLATCHSR_PPP_
+
+108.1. Executing DFFLEGALIZE pass (convert FFs and LATCHes to types supported by the target).
+<suppressed ~4 debug messages>
+Mapping DFF/DLATCH cells in module `\exact_cla':
+  mapped 8 $_DFF_PN0_ cells to \sg13g2_dfrbpq_1 cells.
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)",
+   "invocation": "stat -json -liberty /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/3ec30de098ef4cab997b39ead99b1e28.lib -liberty /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/5703a9a52d154eb1a3edc718244134b3.lib ",
+   "modules": {
+      "\\exact_cla": {
+         "num_wires":         45,
+         "num_wire_bits":     77,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 39,
+         "num_ports":         5,
+         "num_port_bits":     24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         48,
+         "num_submodules":       0,
+         "area":              391.910400,
+         "sequential_area":    391.910400,
+         "num_cells_by_type": {
+            "$_AND_": 1,
+            "$_MUX_": 8,
+            "$_NAND_": 18,
+            "$_XOR_": 13,
+            "sg13g2_dfrbpq_1": 8
+         }
+      }
+   },
+      "design": {
+         "num_wires":         45,
+         "num_wire_bits":     77,
+         "num_pub_wires":     7,
+         "num_pub_wire_bits": 39,
+         "num_ports":         5,
+         "num_port_bits":     24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         48,
+         "num_submodules":       0,
+         "area":              391.910400,
+         "sequential_area":    391.910400,
+         "num_cells_by_type": {
+            "$_AND_": 1,
+            "$_MUX_": 8,
+            "$_NAND_": 18,
+            "$_XOR_": 13,
+            "sg13g2_dfrbpq_1": 8
+         }
+      }
+}
+
+109. Printing statistics.
+
+=== exact_cla ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       45        - wires
+       77        - wire bits
+        7        - public wires
+       39        - public wire bits
+        5        - ports
+       24        - port bits
+       48   391.91 cells
+        1        -   $_AND_
+        8        -   $_MUX_
+       18        -   $_NAND_
+       13        -   $_XOR_
+        8   391.91   sg13g2_dfrbpq_1
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+
+   Chip area for module '\exact_cla': 391.910400
+     of which used for sequential elements: 391.910400 (100.00%)
+
+[INFO] Using generated ABC strategy script '/foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/06-yosys-synthesis/AREA_0.abc'…
+
+110. Executing ABC pass (technology mapping using ABC).
+
+110.1. Summary of detected clock domains:
+  48 cells in clk={ }, en={ }, arst={ }, srst={ }
+
+110.2. Extracting gate netlist of module `\exact_cla' to `/tmp/yosys-abc-nlKCKY/input.blif'..
+No matching clock domain found. Not extracting any FF cells.
+
+110.2.1. Executed ABC.
+Extracted 40 gates and 56 wires to a netlist network with 15 inputs and 8 outputs.
+Running ABC script: /tmp/yosys-abc-nlKCKY/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Oct 15 2026 14:24:00)
+ABC: abc 01> empty
+ABC: abc 01> source /tmp/yosys-abc-nlKCKY/abc.script
+ABC: + read_blif /tmp/yosys-abc-nlKCKY/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache-1000/yosys_merged_f65dec12.scl 
+ABC: + read_constr -v /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sg13g2_buf_4/X".
+ABC: Setting output load to be 6.000000.
+ABC: + source /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sg13g2_buf_4/X) in the library.
+ABC: WireLoad = "none"  Gates =     43 (  7.0 %)   Cap =  6.5 ff (  1.2 %)   Area =      413.68 ( 97.7 %)   Delay =   925.09 ps  ( 23.3 %)               
+ABC: Path  0 --       5 : 0    2 pi             A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   8.3 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      34 : 2    2 sg13g2_xor2_1  A =  14.52  Df =  96.2   -2.7 ps  S =  77.9 ps  Cin =  5.4 ff  Cout =   6.0 ff  Cmax = 300.0 ff  G =  107  
+ABC: Path  2 --      35 : 3    4 sg13g2_nand3_1 A =   9.07  Df = 236.6  -65.7 ps  S = 117.2 ps  Cin =  3.0 ff  Cout =  11.6 ff  Cmax = 300.0 ff  G =  385  
+ABC: Path  3 --      38 : 3    1 sg13g2_a21o_1  A =  12.70  Df = 380.0  -95.2 ps  S =  29.4 ps  Cin =  2.7 ff  Cout =   3.1 ff  Cmax = 300.0 ff  G =  112  
+ABC: Path  4 --      41 : 3    4 sg13g2_a21oi_1 A =   9.07  Df = 506.7 -126.9 ps  S = 132.9 ps  Cin =  3.0 ff  Cout =  12.5 ff  Cmax = 300.0 ff  G =  412  
+ABC: Path  5 --      45 : 3    1 sg13g2_o21ai_1 A =   9.07  Df = 585.4 -105.4 ps  S =  77.2 ps  Cin =  3.3 ff  Cout =   3.1 ff  Cmax = 300.0 ff  G =   92  
+ABC: Path  6 --      48 : 3    3 sg13g2_a21oi_1 A =   9.07  Df = 698.0 -118.1 ps  S = 105.8 ps  Cin =  3.0 ff  Cout =   9.1 ff  Cmax = 300.0 ff  G =  298  
+ABC: Path  7 --      51 : 3    1 sg13g2_or3_1   A =  12.70  Df = 806.6  -73.4 ps  S =  32.9 ps  Cin =  2.5 ff  Cout =   2.6 ff  Cmax = 300.0 ff  G =  100  
+ABC: Path  8 --      53 : 3    1 sg13g2_and3_1  A =  12.70  Df = 925.1  -41.9 ps  S =  44.1 ps  Cin =  2.5 ff  Cout =   6.0 ff  Cmax = 300.0 ff  G =  237  
+ABC: Start-point = pi4 (\b [1]).  End-point = po1 ($auto$rtlil.cc:3492:MuxGate$261).
+ABC: netlist                       : i/o =   15/    8  lat =    0  nd =    43  edge =    101  area =413.68  delay = 8.00  lev = 8
+ABC: + write_blif /tmp/yosys-abc-nlKCKY/output.blif 
+ABC:                                                                                
+ABC: YOSYS_ABC_DONE 
+
+110.2.2. Re-integrating ABC results.
+ABC RESULTS:     sg13g2_a21o_1 cells:        1
+ABC RESULTS:    sg13g2_a21oi_1 cells:        5
+ABC RESULTS:     sg13g2_and2_1 cells:        6
+ABC RESULTS:     sg13g2_and3_1 cells:        1
+ABC RESULTS:      sg13g2_inv_1 cells:        3
+ABC RESULTS:    sg13g2_nand2_1 cells:        4
+ABC RESULTS:    sg13g2_nand3_1 cells:        2
+ABC RESULTS:     sg13g2_nor2_1 cells:        4
+ABC RESULTS:    sg13g2_nor2b_1 cells:        1
+ABC RESULTS:     sg13g2_nor3_1 cells:        6
+ABC RESULTS:    sg13g2_o21ai_1 cells:        2
+ABC RESULTS:      sg13g2_or3_1 cells:        1
+ABC RESULTS:    sg13g2_xnor2_1 cells:        4
+ABC RESULTS:     sg13g2_xor2_1 cells:        3
+ABC RESULTS:        internal signals:       33
+ABC RESULTS:           input signals:       15
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+Removing global temp directory.
+
+111. Executing SETUNDEF pass (replace undef values with defined constants).
+
+112. Executing HILOMAP pass (mapping to constant drivers).
+
+113. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+114. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \exact_cla..
+Removed 1 unused cells and 69 unused wires.
+<suppressed ~17 debug messages>
+
+115. Executing INSBUF pass (insert buffer cells for connected wires).
+
+116. Executing CHECK pass (checking for obvious problems).
+Checking module exact_cla...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.70 (git sha1 28ba3cb92, Release, GNU /usr/bin/c++ 13.3.0)",
+   "invocation": "stat -json -liberty /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/3ec30de098ef4cab997b39ead99b1e28.lib -liberty /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/5703a9a52d154eb1a3edc718244134b3.lib ",
+   "modules": {
+      "\\exact_cla": {
+         "num_wires":         56,
+         "num_wire_bits":     75,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 24,
+         "num_ports":         5,
+         "num_port_bits":     24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         59,
+         "num_submodules":       0,
+         "area":              863.654400,
+         "sequential_area":    391.910400,
+         "num_cells_by_type": {
+            "sg13g2_a21o_1": 1,
+            "sg13g2_a21oi_1": 5,
+            "sg13g2_and2_1": 6,
+            "sg13g2_and3_1": 1,
+            "sg13g2_dfrbpq_1": 8,
+            "sg13g2_inv_1": 3,
+            "sg13g2_nand2_1": 4,
+            "sg13g2_nand3_1": 2,
+            "sg13g2_nor2_1": 4,
+            "sg13g2_nor2b_1": 1,
+            "sg13g2_nor3_1": 6,
+            "sg13g2_o21ai_1": 2,
+            "sg13g2_or3_1": 1,
+            "sg13g2_tiehi": 8,
+            "sg13g2_xnor2_1": 4,
+            "sg13g2_xor2_1": 3
+         }
+      }
+   },
+      "design": {
+         "num_wires":         56,
+         "num_wire_bits":     75,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 24,
+         "num_ports":         5,
+         "num_port_bits":     24,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         59,
+         "num_submodules":       0,
+         "area":              863.654400,
+         "sequential_area":    391.910400,
+         "num_cells_by_type": {
+            "sg13g2_a21o_1": 1,
+            "sg13g2_a21oi_1": 5,
+            "sg13g2_and2_1": 6,
+            "sg13g2_and3_1": 1,
+            "sg13g2_dfrbpq_1": 8,
+            "sg13g2_inv_1": 3,
+            "sg13g2_nand2_1": 4,
+            "sg13g2_nand3_1": 2,
+            "sg13g2_nor2_1": 4,
+            "sg13g2_nor2b_1": 1,
+            "sg13g2_nor3_1": 6,
+            "sg13g2_o21ai_1": 2,
+            "sg13g2_or3_1": 1,
+            "sg13g2_tiehi": 8,
+            "sg13g2_xnor2_1": 4,
+            "sg13g2_xor2_1": 3
+         }
+      }
+}
+
+117. Printing statistics.
+
+=== exact_cla ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       56        - wires
+       75        - wire bits
+        5        - public wires
+       24        - public wire bits
+        5        - ports
+       24        - port bits
+       59  863.654 cells
+        1   12.701   sg13g2_a21o_1
+        5    45.36   sg13g2_a21oi_1
+        6   54.432   sg13g2_and2_1
+        1   12.701   sg13g2_and3_1
+        8   391.91   sg13g2_dfrbpq_1
+        3    16.33   sg13g2_inv_1
+        4    29.03   sg13g2_nand2_1
+        2   18.144   sg13g2_nand3_1
+        4    29.03   sg13g2_nor2_1
+        1    9.072   sg13g2_nor2b_1
+        6   54.432   sg13g2_nor3_1
+        2   18.144   sg13g2_o21ai_1
+        1   12.701   sg13g2_or3_1
+        8   58.061   sg13g2_tiehi
+        4   58.061   sg13g2_xnor2_1
+        3   43.546   sg13g2_xor2_1
+
+   Chip area for module '\exact_cla': 863.654400
+     of which used for sequential elements: 391.910400 (45.38%)
+
+118. Executing Verilog backend.
+Dumping module `\exact_cla'.
+
+119. Executing JSON backend.

@@ -1,0 +1,1 @@
+yosys -y /usr/local/lib/python3.12/dist-packages/librelane/scripts/pyosys/synthesize.py -- --config-in /foss/designs/approx_cla/runs/RUN_2026-11-21_08-29-42/06-yosys-synthesis/config.json --extra-in /foss/designs/approx_cla/runs/RUN_2026-11-21_08-29-42/06-yosys-synthesis/extra.json --output /foss/designs/approx_cla/runs/RUN_2026-11-21_08-29-42/06-yosys-synthesis/approx_cla.nl.v

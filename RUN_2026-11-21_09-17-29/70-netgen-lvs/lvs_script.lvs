@@ -1,0 +1,9 @@
+set circuit1 [readnet spice /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/68-magic-spiceextraction/exact_cla.spice]
+set circuit2 [readnet verilog /dev/null]
+puts "Reading SPICE netlist file '/foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice'..."
+readnet spice /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice $circuit2
+puts "Reading SPICE netlist file '/foss/pdks/ihp-sg13g2/libs.ref/sg13g2_io/spice/sg13g2_io.spice'..."
+readnet spice /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_io/spice/sg13g2_io.spice $circuit2
+puts "Reading Verilog netlist file '/foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/52-openroad-fillinsertion/exact_cla.pnl.v'..."
+readnet verilog /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/52-openroad-fillinsertion/exact_cla.pnl.v $circuit2
+lvs "$circuit1 exact_cla" "$circuit2 exact_cla" /usr/local/lib/python3.12/dist-packages/librelane/scripts/netgen/setup.tcl /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/70-netgen-lvs/reports/lvs.netgen.rpt -blackbox -json

@@ -1,0 +1,30 @@
+118. Printing statistics.
+
+=== approx_cla ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       33        - wires
+       52        - wire bits
+        5        - public wires
+       24        - public wire bits
+        5        - ports
+       24        - port bits
+       36  598.752 cells
+        3   27.216   sg13g2_a21oi_1
+        1   12.701   sg13g2_and3_1
+        1    7.258   sg13g2_buf_1
+        7  342.922   sg13g2_dfrbpq_1
+        1    5.443   sg13g2_inv_1
+        5   36.288   sg13g2_nand2_1
+        2   18.144   sg13g2_nor2b_1
+        5    45.36   sg13g2_o21ai_1
+        1    9.072   sg13g2_or2_1
+        7   50.803   sg13g2_tiehi
+        2    29.03   sg13g2_xnor2_1
+        1   14.515   sg13g2_xor2_1
+
+   Chip area for module '\approx_cla': 598.752000
+     of which used for sequential elements: 342.921600 (57.27%)
+

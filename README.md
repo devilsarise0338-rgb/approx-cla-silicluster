@@ -13,6 +13,7 @@
 
 ## 👥 Project Team & Contributors
 
+* **Institution**: Poornima Institute of Engineering and Technology  
 * **Academic Year**: 2026  
 * **Course**: Digital System and Logic Design (Theory & Lab)  
 * **Faculty Guide / Project Supervisor**: Dr. Aditya Kumar Singh Pundir  
@@ -24,6 +25,7 @@
 | **Kratika Jain** | PIET25CA024 | Logic Synthesis & Comparative Metrics Analysis |
 | **Paarth Khandelwal** | PIET25CA037 | Timing Analysis & Power Characterization |
 | **Manvi Bhardawaj** | PIET25CA029 | Physical Layout Verification & Documentation |
+| **Siddhi Patel** | PIET25CA055 | Physical Implementation & Report Documentation |
 
 ---
 
@@ -140,6 +142,8 @@ approx-cla-silicluster/
 ├── Project_Report_Approx_CLA_Final.docx  # Full comprehensive academic project report
 ├── config_approx.json                    # OpenLane flow configuration for approx_cla
 ├── config_exact.json                     # OpenLane flow configuration for exact_cla
+├── RUN_2026-11-21_08-29-42/              # Full OpenLane run stages & checkpoints for approx_cla
+├── RUN_2026-11-21_09-17-29/              # Full OpenLane run stages & checkpoints for exact_cla
 ├── layout/
 │   ├── approx_cla/                       # Signoff collateral: DEF, GDS, LEF, MAG, ODB, SDC, SDF, SPEF, SPICE
 │   ├── exact_cla/                        # Signoff collateral: DEF, GDS, LEF, MAG, ODB, SDC, SDF, SPEF, SPICE

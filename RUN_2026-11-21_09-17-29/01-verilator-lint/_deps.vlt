@@ -1,0 +1,7 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/3f6d60781aa84f1d90f22cfa1800c674.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/3f6d60781aa84f1d90f22cfa1800c674.bb.v"
+lint_off -rule UNDRIVEN -file "/foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/d097e60b42144d62bd3c94246211dd28.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/tmp/d097e60b42144d62bd3c94246211dd28.bb.v"

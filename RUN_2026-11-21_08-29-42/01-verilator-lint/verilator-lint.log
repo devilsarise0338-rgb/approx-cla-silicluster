@@ -1,0 +1,13 @@
+%Warning-UNUSEDSIGNAL: /foss/designs/approx_cla/approx_cla.v:4:23: Bits of signal are not used: 'a'[1:0]
+                                                                 : ... note: In instance 'approx_cla'
+    4 |     input  wire [6:0] a,
+      |                       ^
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.052
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /foss/designs/approx_cla/approx_cla.v:5:23: Bits of signal are not used: 'b'[1:0]
+                                                                 : ... note: In instance 'approx_cla'
+    5 |     input  wire [6:0] b,
+      |                       ^
+- V e r i l a t i o n   R e p o r t: Verilator 5.052 2026-09-05 rev v5.052
+- Verilator: Built from 0.138 MB sources in 108 modules, into 0.022 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.127 s (elab=0.007, cvt=0.050, bld=0.000); cpu 0.126 s on 1 threads; allocated 23.562 MB

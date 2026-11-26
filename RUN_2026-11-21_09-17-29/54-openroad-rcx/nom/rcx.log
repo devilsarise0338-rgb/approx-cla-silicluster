@@ -1,0 +1,36 @@
+[WARNING ORD-0032] Invalid thread number specification: None.
+Reading technology LEF file at '/foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef'…
+[INFO ODB-0227] LEF file: /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef, created 19 layers, 70 vias
+Reading cell LEF file at '/foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef'…
+[INFO ODB-0227] LEF file: /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef, created 84 library cells
+Reading gpio pad LEF file at '/foss/pdks/ihp-sg13g2/libs.ref/sg13g2_io/lef/sg13g2_io.lef'…
+[INFO ODB-0227] LEF file: /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_io/lef/sg13g2_io.lef, created 22 library cells
+[INFO ODB-0127] Reading DEF file: /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/53-odb-cellfrequencytables/exact_cla.def
+[INFO ODB-0128] Design: exact_cla
+[INFO ODB-0130]     Created 26 pins.
+[INFO ODB-0131]     Created 1165 components and 2566 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 2330 connections.
+[INFO ODB-0133]     Created 101 nets and 236 connections.
+[INFO ODB-0134] Finished DEF file: /foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/53-odb-cellfrequencytables/exact_cla.def
+Using RCX ruleset '/foss/pdks/ihp-sg13g2/libs.tech/librelane/openrcx/IHP_rcx_patterns.rules'…
+[INFO RCX-0431] Defined process_corner CURRENT_CORNER with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner CURRENT_CORNER
++ extract_parasitics  -ext_model_file /foss/pdks/ihp-sg13g2/libs.tech/librelane/openrcx/IHP_rcx_patterns.rules -lef_res
+[INFO RCX-0435] Reading extraction model file /foss/pdks/ihp-sg13g2/libs.tech/librelane/openrcx/IHP_rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation exact_cla (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 273 rc segments
+[INFO RCX-0439] Coupling Cap extraction exact_cla ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 55% of 472 wires extracted
+[INFO RCX-0442] 100% of 472 wires extracted
+[INFO RCX-0045] Extract 101 nets, 374 rsegs, 374 caps, 225 ccs
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 0 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                              1080   12844.14
+  Standard cell                            85    1166.66
+  Total                                  1165   14010.80
+Writing extracted parasitics to '/foss/designs/exact_cla/runs/RUN_2026-11-21_09-17-29/54-openroad-rcx/nom/exact_cla.nom.spef'…
+[INFO RCX-0443] 101 nets finished
