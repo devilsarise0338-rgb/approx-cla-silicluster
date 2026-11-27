@@ -40,7 +40,7 @@
 | **Kratika Jain** | PIET25CA024 | Logic Synthesis (Yosys) & Structural Optimization |
 | **Paarth Khandelwal** | PIET25CA037 | Static Timing Analysis (STA) & Power Modeling |
 | **Manvi Bhardawaj** | PIET25CA029 | Physical DRC/LVS Verification & Layout Sign-off |
-| **Siddhi Patel** | PIET25CA055 | Physical Implementation & Technical Documentation |
+| **Siddhi Patel** | PIET25CA053 | Physical Implementation & Technical Documentation |
 
 ---
 
