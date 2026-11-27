@@ -13,3 +13,10 @@ ehthumbs_vista.db
 ~$*.pptx
 *.tmp
 *~
+
+# Archives
+*.zip
+*.tar
+*.gz
+*.bak
+
